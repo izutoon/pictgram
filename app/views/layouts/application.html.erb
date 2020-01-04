@@ -10,9 +10,6 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-    <% end %> 
     
     <nav class="navbar navber-default navber-fixed-top navbar-transparent">
       <div class="container">
@@ -52,11 +49,10 @@
       </div>
     </nav>
     
-    
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-      <% end %>
-      
+    <% end %> 
+    
      <%= yield %> 
      
     <script>
