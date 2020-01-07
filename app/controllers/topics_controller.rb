@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  #指定したアクションでのみそのメソッドを実行することができる
+  before_action :authenticate_user,{only: [create]}
   def index
     @topics = Topic.all
   end
@@ -22,11 +24,5 @@ class TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:image, :discription)
   end
-  #ここから下、ログインしていないと投稿できない制限
-  def authenticate_user
-    if @current_user == nil
-       flash[:notice] = "ログインが必要です"
-       redirect_to("/login")
-    end
-  end
 end
+ 
