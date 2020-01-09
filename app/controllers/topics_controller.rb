@@ -1,6 +1,5 @@
 class TopicsController < ApplicationController
-  #指定したアクションでのみそのメソッドを実行することができる
-  before_action :authenticate_user,{only: [create]}
+ 
   def index
     @topics = Topic.all
   end
