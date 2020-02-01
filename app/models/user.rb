@@ -8,4 +8,7 @@ class User < ApplicationRecord
   has_many :topics
   has_many :favorites
   has_many :favorite_topics, through: :favorites, source: 'topic'
+  #ここの意味
+  has_many :comments
+  has_many :comments_topics, through: :comments, source: 'topic'
 end

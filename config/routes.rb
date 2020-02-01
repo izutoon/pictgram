@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
-  #追加
   delete '/favorites', to: 'favorites#destroy'
+  
+  get 'comments/index'
+  get 'comments/new'
+  post '/comments', to: 'comments#create'
+  delete '/comments', to: 'comments#destroy'
+  
+  
 end
