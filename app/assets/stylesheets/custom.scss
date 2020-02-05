@@ -135,6 +135,25 @@ h1, h2 {
       height: 30px;
       margin-left: 20px;
     }
+    
+     .topic-index-icon-off {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+    
+    .topic-index-icon-off:hover {
+      height: 50px;
+      width: 50px;
+    }
+    
+    .topic-index-icon-on {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      background: red;
+      filter: invert(70%) hue-rotate(160deg) brightness(311%);
+    }  
+    
   }
 }
-
