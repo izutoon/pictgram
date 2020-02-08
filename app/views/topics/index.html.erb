@@ -17,9 +17,10 @@
             <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
               <i class="fas fa-heart text-danger h2" style="margin-left:30px;"></i>
             <% end %>
-              <%#いいねの数カウント　%>
-              <%= topic.favorite_users.count %>
           <% end %>
+            <%#いいねの数カウント　%>
+            <%= topic.favorite_users.count %>
+              
             <%= link_to comments_new_path(topic_id: topic.id) do %>
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <% end %>
